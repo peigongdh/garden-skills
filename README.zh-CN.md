@@ -549,7 +549,7 @@ npm run validate  # 跑一遍和 PR CI 完全一样的检查
 本集合站在以下工作的肩膀上：
 
 - **[Anthropic](https://www.anthropic.com)** —— [Agent Skills 规范](https://agentskills.io) 和 [`anthropics/skills`](https://github.com/anthropics/skills) 参考仓库。
-- **[Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs)** —— `web-design-engineer` 的灵感来源，原系统提示词保留在 [`dist/prompt/claude-design-system-prompt.md`](./dist/prompt/claude-design-system-prompt.md) 供参考。
+- **[Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs)** —— `web-design-engineer` 的灵感来源，原系统提示词保留在 [`dist/prompts/claude-design-system-prompt.md`](./dist/prompts/claude-design-system-prompt.md) 供参考。
 - 更广义的 OSS Skill 社区——延伸阅读：[`travisvn/awesome-claude-skills`](https://github.com/travisvn/awesome-claude-skills) 和 [`obra/superpowers`](https://github.com/obra/superpowers)。
 
 ---

@@ -132,7 +132,7 @@ The agent will automatically pick up the skill when your request involves visual
 
 The skill ships **25 named recipes**, each tied to a real brand, studio, or designer. Every recipe has a working, full-page artefact in the demo gallery — not a shared template, not a thumbnail mood-board, but the form each recipe was actually designed for: an apothecary product page for Aesop, a trading workstation for Bloomberg Terminal, a Saul-Bass poster for Mid-Century, a Y2K portal for Retrofuturism. Browse by school below, pick the one whose vibe matches your brief, or read the spec file at `references/style-recipes/<recipe>.md`. Click any preview to open the full-resolution 2:1 frame.
 
-> Frames are real artefacts rendered by the live React + Vite gallery at [`demo/web-design-engineer-demo`](../../demo/web-design-engineer-demo/) — same fonts, same palettes, same signature moves as the recipe spec. Each demo is in `src/recipes/<id>.tsx`.
+> The showcase credits a React + Vite gallery at `demo/web-design-engineer-demo`, with each demo in `src/recipes/<id>.tsx`. That gallery source is not included in this checkout; the previews and recipe specifications remain available below.
 
 ### Editorial / Minimalist · 5 recipes
 
@@ -403,14 +403,9 @@ The skill ships **25 named recipes**, each tied to a real brand, studio, or desi
 </tr>
 </table>
 
-### Run the gallery yourself
+### Gallery source availability
 
-```bash
-cd demo/web-design-engineer-demo
-npm install && npm run dev    # http://localhost:5181/
-```
-
-Hash-routed URLs (`#/linear`, `#/aesop`, …) deep-link to any recipe. Press `H` to toggle the recipe HUD, `Esc` to return to the gallery. See the demo's own [README](../../demo/web-design-engineer-demo/README.md) for layout details.
+The showcase above credits `demo/web-design-engineer-demo`, which is not included in this checkout. The gallery commands and hash routes require that separate source. Included skill-on/off comparisons are available in [demo/web-design-demo](../../demo/web-design-demo/).
 
 ---
 
@@ -445,7 +440,7 @@ The repository's [`demo/web-design-demo/`](../../demo/web-design-demo) directory
 | **Motion** | Slow Ken Burns on hero image (24s cycle), film-grain texture overlay |
 | **Navigation** | `mix-blend-mode: difference` masthead — seamless across light/dark sections |
 
-> The original Claude Design system prompt that inspired this skill is preserved at [`dist/prompt/claude-design-system-prompt.md`](../../dist/prompt/claude-design-system-prompt.md).
+> The original Claude Design system prompt that inspired this skill is preserved at [`dist/prompts/claude-design-system-prompt.md`](../../dist/prompts/claude-design-system-prompt.md).
 
 ---
 

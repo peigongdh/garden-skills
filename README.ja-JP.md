@@ -550,7 +550,7 @@ npm run validate  # CI がすべての PR で実行するのと同じチェッ�
 このコレクションは、以下の肩の上に成り立っています:
 
 - **[Anthropic](https://www.anthropic.com)** - [Agent Skills 仕様](https://agentskills.io) および [`anthropics/skills`](https://github.com/anthropics/skills) リファレンスリポジトリの提供。
-- **[Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs)** - `web-design-engineer` のインスピレーションとなったシステムプロンプト。オリジナルは参考のため [`dist/prompt/claude-design-system-prompt.md`](./dist/prompt/claude-design-system-prompt.md) に保存されています。
+- **[Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs)** - `web-design-engineer` のインスピレーションとなったシステムプロンプト。オリジナルは参考のため [`dist/prompts/claude-design-system-prompt.md`](./dist/prompts/claude-design-system-prompt.md) に保存されています。
 - より広い OSS スキルコミュニティ - さらなる発見のために [`travisvn/awesome-claude-skills`](https://github.com/travisvn/awesome-claude-skills) と [`obra/superpowers`](https://github.com/obra/superpowers) を参照してください。
 
 ---
