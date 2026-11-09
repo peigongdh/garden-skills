@@ -5,6 +5,14 @@ behind this monorepo.
 
 [English](./CONTRIBUTING.md) · [中文文档](./CONTRIBUTING.zh-CN.md) · [日本語](./CONTRIBUTING.ja-JP.md)
 
+## Home Lab fork policy（2026-11-09）
+
+This fork is an upstream reference with local documentation fixes, not an independent distribution. This is the accepted D02 decision; no release, tag push or branch merge has been performed by recording it.
+
+Keep download links associated with verified upstream releases. A future validator fix must distinguish upstream release metadata from this fork's local tags; missing fork tags do not establish that upstream has never released. Do not import and push upstream tags to trigger releases in this fork. The documentation branch can be merged after the appropriate checks and release-source correction, without creating a fork release. Locate missing gallery source only when it is needed.
+
+The maintainer workflow below describes upstream release tooling; it is not authorization to run it for this fork. Cross-workspace context is in [the accepted follow-up decisions](../homelab-infra/docs/proposals/PROP-001-homelab-delivery.md#文档治理后续决策2026-11-09).
+
 ---
 
 ## Table of contents
