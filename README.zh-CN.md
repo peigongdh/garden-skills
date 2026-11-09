@@ -96,7 +96,7 @@
 
 <sub>↑ 用这个 Skill 做的作品，各截 4 秒——<a href="./skills/motion-showreel/README.zh-CN.md#作品展示"><b>打开作品展示</b></a>，看全部作品（包括 Skill 自己的 80 秒宣传片）和风格画廊。</sub>
 
-链接：[README](./skills/motion-showreel/README.zh-CN.md) · [SKILL.md](./skills/motion-showreel/SKILL.md) · <!-- DOWNLOAD:motion-showreel:start -->[下载 v0.1.0 .zip](https://github.com/ConardLi/garden-skills/releases/download/motion-showreel-v0.1.0/motion-showreel-0.1.0.zip)<!-- DOWNLOAD:motion-showreel:end -->
+链接：[README](./skills/motion-showreel/README.zh-CN.md) · [SKILL.md](./skills/motion-showreel/SKILL.md) · <!-- DOWNLOAD:motion-showreel:start -->[下载 v0.2.0 .zip](https://github.com/ConardLi/garden-skills/releases/download/motion-showreel-v0.2.0/motion-showreel-0.2.0.zip)<!-- DOWNLOAD:motion-showreel:end -->
 
 ---
 
@@ -549,7 +549,7 @@ npm run validate  # 跑一遍和 PR CI 完全一样的检查
 本集合站在以下工作的肩膀上：
 
 - **[Anthropic](https://www.anthropic.com)** —— [Agent Skills 规范](https://agentskills.io) 和 [`anthropics/skills`](https://github.com/anthropics/skills) 参考仓库。
-- **[Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs)** —— `web-design-engineer` 的灵感来源，原系统提示词保留在 [`dist/prompt/claude-design-system-prompt.md`](./dist/prompt/claude-design-system-prompt.md) 供参考。
+- **[Claude Design](https://www.anthropic.com/news/claude-design-anthropic-labs)** —— `web-design-engineer` 的灵感来源，原系统提示词保留在 [`dist/prompts/claude-design-system-prompt.md`](./dist/prompts/claude-design-system-prompt.md) 供参考。
 - 更广义的 OSS Skill 社区——延伸阅读：[`travisvn/awesome-claude-skills`](https://github.com/travisvn/awesome-claude-skills) 和 [`obra/superpowers`](https://github.com/obra/superpowers)。
 
 ---

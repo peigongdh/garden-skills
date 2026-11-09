@@ -69,7 +69,6 @@ skills/web-video-presentation/
 ├── SKILL.md
 ├── README.md / README.zh-CN.md
 ├── references/
-│   ├── PRINCIPLES.md
 │   ├── CHAPTER-CRAFT.md
 │   ├── OUTLINE-FORMAT.md
 │   ├── SCRIPT-STYLE.md
@@ -123,7 +122,7 @@ bash skills/web-video-presentation/scripts/scaffold.sh --list-themes
 
 Skill 内置 **23 套**主题，每套都有独立的设计 DNA —— 不是简单换色版。下面按底色分两组浏览，挑一套接近目标气质的，或者把任意一格当作派生新主题的起点。点击任意预览图可放大查看 1920×1080 原帧。
 
-> 所有截图都是真实的 16:9 舞台，来自 [`demo/web-video-presentation-demo`](../../demo/web-video-presentation-demo/) 现场画廊。
+> 原展示注明截图来自 `demo/web-video-presentation-demo` 的 16:9 舞台。该画廊源码未随当前检出提供；本仓包含的章节示例见 [EXAMPLES](./references/EXAMPLES/README.md)。
 
 ### 深色 · 8 套
 
@@ -311,11 +310,10 @@ Skill 内置 **23 套**主题，每套都有独立的设计 DNA —— 不是简
 
 ## Reference Map
 
-- [PRINCIPLES.md](./references/PRINCIPLES.md)：视频感网页演示的核心原则
-- [CHAPTER-CRAFT.md](./references/CHAPTER-CRAFT.md)：章节实现规则与视觉 checklist
+- [CHAPTER-CRAFT.md](./references/CHAPTER-CRAFT.md)：核心原则、章节实现规则与视觉自检清单
 - [OUTLINE-FORMAT.md](./references/OUTLINE-FORMAT.md)：outline 必须遵循的结构
 - [SCRIPT-STYLE.md](./references/SCRIPT-STYLE.md)：文章转口播稿规则
-- [PATTERNS.md](./references/PATTERNS.md)：可选视觉 primitive 配方
+- [EXAMPLES](./references/EXAMPLES/README.md)：可选章节结构与题材示例
 - [AUDIO.md](./references/AUDIO.md)：可选口播音频合成流程（provider-agnostic）
 - [tts-providers/README.md](./templates/scripts/tts-providers/README.md)：TTS provider 三函数契约 + 内置 2 个 (minimax / openai) + ElevenLabs / edge-tts / Azure / Google / macOS say 的现成代码片段
 - [RECORDING.md](./references/RECORDING.md)：录屏与后期注意事项

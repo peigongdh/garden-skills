@@ -5,6 +5,16 @@ behind this monorepo.
 
 [English](./CONTRIBUTING.md) · [中文文档](./CONTRIBUTING.zh-CN.md) · [日本語](./CONTRIBUTING.ja-JP.md)
 
+## Home Lab fork policy（2026-11-09）
+
+This fork is an upstream reference with local documentation fixes, not an independent distribution. This is the accepted D02 decision; no release, tag push or branch merge has been performed by recording it.
+
+Download links use the six verified upstream releases pinned in [upstream-releases.json](scripts/release/upstream-releases.json). The source was checked against upstream release records and uploaded ZIP assets on 2026-11-09; it updates the motion-showreel download link to its already published 0.2.0 release, without changing skill contents. README validation is offline and ignores this fork's tags and CI repository name. To change a pinned version, first verify its upstream release and ZIP asset, update the snapshot, run `npm run readme:sync`, and run `npm run validate`. Missing or inconsistent metadata fails validation. Do not import and push upstream tags to trigger releases in this fork. Locate missing gallery source only when it is needed.
+
+The original tag-based README mode remains available explicitly as `npm run readme:sync -- --local-tags --repo owner/repository` for upstream release maintenance. It is not this fork's default and does not authorize a fork release. The regression suite covers repository identity, missing releases, invalid assets, and the fork CI environment.
+
+The maintainer workflow below describes upstream release tooling; it is not authorization to run it for this fork. Cross-workspace context is in [the accepted follow-up decisions](../homelab-infra/docs/proposals/PROP-001-homelab-delivery.md#文档治理后续决策2026-11-09).
+
 ---
 
 ## Table of contents
@@ -280,8 +290,9 @@ npm run release:dry   # same, but stops before any writes (preview only)
 npm run list          # list all skills + manifest status (exit 1 on bad manifest)
 npm run pack          # pack one skill: npm run pack -- --skill web-design-engineer
 npm run pack:all      # pack every skill into dist/release/
-npm run readme:sync   # rewrite README download links to current manifest versions
+npm run readme:sync   # rewrite README links from the verified upstream snapshot
 npm run readme:check  # CI-style: exit 1 if any download link is stale
+npm run test:release  # release-source and fork CI regression tests
 
 npm run validate      # everything CI runs on every PR (list + pack:all + readme:check)
 ```

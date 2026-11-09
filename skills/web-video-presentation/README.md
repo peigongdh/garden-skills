@@ -69,7 +69,6 @@ skills/web-video-presentation/
 ├── SKILL.md
 ├── README.md / README.zh-CN.md
 ├── references/
-│   ├── PRINCIPLES.md
 │   ├── CHAPTER-CRAFT.md
 │   ├── OUTLINE-FORMAT.md
 │   ├── SCRIPT-STYLE.md
@@ -123,7 +122,7 @@ The generated `presentation/` project is a normal Vite + React + TypeScript app.
 
 The skill ships **23 themes**, each with its own design DNA — not a simple color swap. Browse the gallery below by canvas tone, pick one that fits the topic, or use any tile as a starting point for a derived theme. Click any preview to open the full-size 1920×1080 frame.
 
-> Frames are real 16:9 stages rendered by the live demo gallery at [`demo/web-video-presentation-demo`](../../demo/web-video-presentation-demo/).
+> The showcase credits 16:9 stages rendered by `demo/web-video-presentation-demo`. That gallery source is not included in this checkout; included chapter examples are listed in [EXAMPLES](./references/EXAMPLES/README.md).
 
 ### Dark · 8 themes
 
@@ -311,11 +310,10 @@ The skill ships **23 themes**, each with its own design DNA — not a simple col
 
 ## Reference Map
 
-- [PRINCIPLES.md](./references/PRINCIPLES.md) — core rules for video-like web presentations
-- [CHAPTER-CRAFT.md](./references/CHAPTER-CRAFT.md) — chapter implementation rules and visual checklist
+- [CHAPTER-CRAFT.md](./references/CHAPTER-CRAFT.md) — core principles, chapter implementation rules and visual checklist
 - [OUTLINE-FORMAT.md](./references/OUTLINE-FORMAT.md) — required outline structure
 - [SCRIPT-STYLE.md](./references/SCRIPT-STYLE.md) — article-to-narration rewrite guidance
-- [PATTERNS.md](./references/PATTERNS.md) — optional visual primitive recipes
+- [EXAMPLES](./references/EXAMPLES/README.md) — optional chapter structure and subject examples
 - [AUDIO.md](./references/AUDIO.md) — optional narration synthesis workflow (provider-agnostic)
 - [tts-providers/README.md](./templates/scripts/tts-providers/README.md) — TTS provider contract + 2 built-ins (minimax / openai) + ready-to-paste snippets for ElevenLabs / edge-tts / Azure / Google Cloud / macOS say
 - [RECORDING.md](./references/RECORDING.md) — screen recording and post-production notes

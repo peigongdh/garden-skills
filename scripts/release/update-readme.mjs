@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 // Rewrites the <!-- DOWNLOAD:<skill>:start --> ... <!-- DOWNLOAD:<skill>:end -->
 // blocks in README.md, README.zh-CN.md, and README.ja-JP.md so they always advertise the
-// most recently published version of each skill.
+// selected, verified upstream version of each skill in this reference fork.
 //
-// IMPORTANT: the version source is the latest *git tag* for that skill
+// The default source is upstream-releases.json, independent of this fork's tags
+// and GITHUB_REPOSITORY. Explicit --local-tags retains the upstream maintainer mode.
+// In that mode the version source is the latest *git tag* for that skill
 // (`<skill>-v<semver>`), NOT skills/<name>/manifest.json. The manifest is
 // the "version under development"; the README must point at what users
 // can actually download right now. Otherwise bumping a manifest before
@@ -27,6 +29,7 @@ import {
   lastTagFor,
   parseTag,
 } from "./lib/skills.mjs";
+import { loadReleaseSource } from "./lib/release-source.mjs";
 
 const DEFAULT_REPO = "ConardLi/garden-skills";
 
@@ -47,9 +50,8 @@ const COPY = {
 // flavours (npx, marketplace, manual copy, submodule) live in the unified
 // Install section below.
 //
-// The URL points at the pinned zip for the latest published version (read
-// from the latest git tag for this skill). Skills that have never been
-// released get a placeholder so the marker still round-trips cleanly.
+// The URL points at the selected upstream zip, or a version selected by the
+// explicit local-tag mode. Only local-tag mode can produce an unreleased marker.
 function buildBlock(skill, version, repo, lang) {
   if (!version) return COPY[lang].unreleased;
   const tag = buildTag(skill, version);
@@ -96,11 +98,18 @@ function escapeRe(s) {
 }
 
 function parseArgs(argv) {
-  const args = { check: false, repo: process.env.GITHUB_REPOSITORY || DEFAULT_REPO };
+  const args = { check: false, repo: undefined, localTags: false,
+    source: path.join(REPO_ROOT, "scripts/release/upstream-releases.json") };
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--check") args.check = true;
-    else if (a === "--repo") args.repo = argv[++i];
+    else if (a === "--repo" || a === "--release-source") {
+      const value = argv[++i];
+      if (!value || value.startsWith("--")) throw new Error(`Missing value for ${a}`);
+      if (a === "--repo") args.repo = value;
+      else args.source = value;
+    }
+    else if (a === "--local-tags") args.localTags = true;
     else if (a === "--help" || a === "-h") args.help = true;
     else throw new Error(`Unknown arg: ${a}`);
   }
@@ -110,19 +119,23 @@ function parseArgs(argv) {
 async function main() {
   const args = parseArgs(process.argv);
   if (args.help) {
-    console.log("Usage: update-readme.mjs [--check] [--repo owner/repo]");
+    console.log("Usage: update-readme.mjs [--check] [--release-source file] [--repo owner/repo] [--local-tags]");
     return;
   }
 
   const manifests = await loadAllManifests();
+  const source = args.localTags ? null : await loadReleaseSource(
+    args.source, manifests.map((m) => m.name), args.repo,
+  );
+  args.repo = source?.repo ?? args.repo ?? process.env.GITHUB_REPOSITORY ?? DEFAULT_REPO;
   // Resolve the published version for each skill ONCE here, so we don't
   // shell out to git per-file.
   const published = manifests.map((m) => ({
     name: m.name,
     manifestVersion: m.manifest.version,
-    publishedVersion: publishedVersionFor(m.name),
+    publishedVersion: source ? source.versions[m.name] : publishedVersionFor(m.name),
   }));
-  console.log(`[readme] repo=${args.repo}  skills=${manifests.length}`);
+  console.log(`[readme] repo=${args.repo}  source=${args.localTags ? "local-tags" : args.source}  skills=${manifests.length}`);
   for (const p of published) {
     const note =
       p.publishedVersion === null

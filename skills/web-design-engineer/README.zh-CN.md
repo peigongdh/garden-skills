@@ -132,7 +132,7 @@ your-project/
 
 Skill 自带 **25 套有名字的配方**，每套都对应到真实的品牌、工作室或设计师。目录中的每个配方都在 demo 画廊里有一个完整的整页作品 —— 不是共用模板、不是缩略图情绪板，而是每套配方本来就该长成的那种东西：Aesop 是药剂师产品页、Bloomberg Terminal 是交易工作站、Mid-Century 是 Saul Bass 海报、Y2K 是世纪之交的门户网站。按学派浏览下方卡片，挑一套气质契合你 brief 的配方，或者直接读 `references/style-recipes/<recipe>.md` 的 spec 文件。点击任意预览图打开完整分辨率的 2:1 大图。
 
-> 所有截图都是来自 [`demo/web-design-engineer-demo`](../../demo/web-design-engineer-demo/) 这个 React + Vite 画廊的真实渲染 —— 字体、配色、签名手法都和 spec 文件里一致。每个 demo 位于 `src/recipes/<id>.tsx`。
+> 原展示注明截图来自 `demo/web-design-engineer-demo` 这个 React + Vite 画廊，每个 demo 位于 `src/recipes/<id>.tsx`。该画廊源码未随当前检出提供；下方预览与配方说明仍可查阅。
 
 ### Editorial / 极简 · 5 套
 
@@ -403,14 +403,9 @@ Skill 自带 **25 套有名字的配方**，每套都对应到真实的品牌、
 </tr>
 </table>
 
-### 自己跑画廊
+### 画廊源码的可用范围
 
-```bash
-cd demo/web-design-engineer-demo
-npm install && npm run dev    # http://localhost:5181/
-```
-
-Hash 路由 URL（`#/linear`、`#/aesop`、…）可深链到任意配方。按 `H` 切换配方 HUD，`Esc` 返回画廊。布局细节见 demo 自己的 [README](../../demo/web-design-engineer-demo/README.md)。
+上方展示注明的 `demo/web-design-engineer-demo` 未随当前检出提供，原画廊启动命令和 Hash 路由需要该独立源码。本仓已有的 Skill 开/关对比页见 [demo/web-design-demo](../../demo/web-design-demo/)。
 
 ---
 
@@ -445,7 +440,7 @@ Hash 路由 URL（`#/linear`、`#/aesop`、…）可深链到任意配方。按 
 | **动效** | Hero 图片的慢速 Ken Burns 动画（24秒周期），胶片噪点纹理叠加 |
 | **导航** | `mix-blend-mode: difference` 顶栏 —— 在深浅背景间无缝过渡 |
 
-> 启发本 Skill 的 Claude Design 原始系统提示词保留在 [`dist/prompt/claude-design-system-prompt.md`](../../dist/prompt/claude-design-system-prompt.md)。
+> 启发本 Skill 的 Claude Design 原始系统提示词保留在 [`dist/prompts/claude-design-system-prompt.md`](../../dist/prompts/claude-design-system-prompt.md)。
 
 ---
 
