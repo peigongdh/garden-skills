@@ -32,14 +32,11 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      # Tags are required for `npm run readme:check` — it resolves each
-      # skill's "currently published" version from the latest <skill>-v*
-      # tag. Without fetch-tags the runner sees no tags and reports every
-      # skill as "no release yet", which contradicts the actual README.
+      # This reference fork validates a checked-in upstream release snapshot.
+      # Fork tags and GITHUB_REPOSITORY do not define upstream downloads.
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          fetch-tags: true
+          fetch-depth: 1
 
       - uses: actions/setup-node@v4
         with:

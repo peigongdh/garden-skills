@@ -1,0 +1,36 @@
+{
+  "repository": "ConardLi/garden-skills",
+  "verified_at": "2026-11-09",
+  "releases": {
+    "motion-showreel": {
+      "version": "0.2.0",
+      "release_url": "https://github.com/ConardLi/garden-skills/releases/tag/motion-showreel-v0.2.0",
+      "asset_url": "https://github.com/ConardLi/garden-skills/releases/download/motion-showreel-v0.2.0/motion-showreel-0.2.0.zip"
+    },
+    "web-video-presentation": {
+      "version": "1.2.2",
+      "release_url": "https://github.com/ConardLi/garden-skills/releases/tag/web-video-presentation-v1.2.2",
+      "asset_url": "https://github.com/ConardLi/garden-skills/releases/download/web-video-presentation-v1.2.2/web-video-presentation-1.2.2.zip"
+    },
+    "web-design-engineer": {
+      "version": "1.3.0",
+      "release_url": "https://github.com/ConardLi/garden-skills/releases/tag/web-design-engineer-v1.3.0",
+      "asset_url": "https://github.com/ConardLi/garden-skills/releases/download/web-design-engineer-v1.3.0/web-design-engineer-1.3.0.zip"
+    },
+    "gpt-image-2": {
+      "version": "1.0.4",
+      "release_url": "https://github.com/ConardLi/garden-skills/releases/tag/gpt-image-2-v1.0.4",
+      "asset_url": "https://github.com/ConardLi/garden-skills/releases/download/gpt-image-2-v1.0.4/gpt-image-2-1.0.4.zip"
+    },
+    "beautiful-article": {
+      "version": "0.1.0",
+      "release_url": "https://github.com/ConardLi/garden-skills/releases/tag/beautiful-article-v0.1.0",
+      "asset_url": "https://github.com/ConardLi/garden-skills/releases/download/beautiful-article-v0.1.0/beautiful-article-0.1.0.zip"
+    },
+    "kb-retriever": {
+      "version": "1.0.1",
+      "release_url": "https://github.com/ConardLi/garden-skills/releases/tag/kb-retriever-v1.0.1",
+      "asset_url": "https://github.com/ConardLi/garden-skills/releases/download/kb-retriever-v1.0.1/kb-retriever-1.0.1.zip"
+    }
+  }
+}
